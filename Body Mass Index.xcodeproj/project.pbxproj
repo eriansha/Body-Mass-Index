@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3435F129D8E64900729788 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F029D8E64900729788 /* CalculatorView.swift */; };
+		2C3435F329D8E7AB00729788 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F229D8E7AB00729788 /* HistoryView.swift */; };
+		2C3435F529D8E7E400729788 /* Bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F429D8E7E400729788 /* Bmi.swift */; };
 		2C6375E429C7FC060028CE5E /* Body_Mass_IndexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */; };
 		2C6375E629C7FC060028CE5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375E529C7FC060028CE5E /* ContentView.swift */; };
 		2C6375E829C7FC070028CE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6375E729C7FC070028CE5E /* Assets.xcassets */; };
 		2C6375EB29C7FC070028CE5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6375EA29C7FC070028CE5E /* Preview Assets.xcassets */; };
-		2C6375ED29C7FC070028CE5E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375EC29C7FC070028CE5E /* Persistence.swift */; };
-		2C6375F029C7FC070028CE5E /* Body_Mass_Index.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375EE29C7FC070028CE5E /* Body_Mass_Index.xcdatamodeld */; };
 		2C6375FA29C7FC070028CE5E /* Body_Mass_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375F929C7FC070028CE5E /* Body_Mass_IndexTests.swift */; };
 		2C63760429C7FC070028CE5E /* Body_Mass_IndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63760329C7FC070028CE5E /* Body_Mass_IndexUITests.swift */; };
 		2C63760629C7FC070028CE5E /* Body_Mass_IndexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63760529C7FC070028CE5E /* Body_Mass_IndexUITestsLaunchTests.swift */; };
@@ -36,13 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C3435F029D8E64900729788 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		2C3435F229D8E7AB00729788 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		2C3435F429D8E7E400729788 /* Bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bmi.swift; sourceTree = "<group>"; };
 		2C6375E029C7FC060028CE5E /* Body Mass Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Body Mass Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_Mass_IndexApp.swift; sourceTree = "<group>"; };
 		2C6375E529C7FC060028CE5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C6375E729C7FC070028CE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C6375EA29C7FC070028CE5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C6375EC29C7FC070028CE5E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		2C6375EF29C7FC070028CE5E /* Body_Mass_Index.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Body_Mass_Index.xcdatamodel; sourceTree = "<group>"; };
 		2C6375F529C7FC070028CE5E /* Body Mass IndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Body Mass IndexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6375F929C7FC070028CE5E /* Body_Mass_IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_Mass_IndexTests.swift; sourceTree = "<group>"; };
 		2C6375FF29C7FC070028CE5E /* Body Mass IndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Body Mass IndexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3435F629D8E8A400729788 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C3435F029D8E64900729788 /* CalculatorView.swift */,
+				2C3435F229D8E7AB00729788 /* HistoryView.swift */,
+				2C6375E529C7FC060028CE5E /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C3435F729D8F5AA00729788 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C3435F429D8E7E400729788 /* Bmi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2C6375D729C7FC060028CE5E = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +118,10 @@
 		2C6375E229C7FC060028CE5E /* Body Mass Index */ = {
 			isa = PBXGroup;
 			children = (
+				2C3435F729D8F5AA00729788 /* Model */,
+				2C3435F629D8E8A400729788 /* View */,
 				2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */,
-				2C6375E529C7FC060028CE5E /* ContentView.swift */,
 				2C6375E729C7FC070028CE5E /* Assets.xcassets */,
-				2C6375EC29C7FC070028CE5E /* Persistence.swift */,
-				2C6375EE29C7FC070028CE5E /* Body_Mass_Index.xcdatamodeld */,
 				2C6375E929C7FC070028CE5E /* Preview Content */,
 			);
 			path = "Body Mass Index";
@@ -263,8 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C6375F029C7FC070028CE5E /* Body_Mass_Index.xcdatamodeld in Sources */,
-				2C6375ED29C7FC070028CE5E /* Persistence.swift in Sources */,
+				2C3435F329D8E7AB00729788 /* HistoryView.swift in Sources */,
+				2C3435F529D8E7E400729788 /* Bmi.swift in Sources */,
+				2C3435F129D8E64900729788 /* CalculatorView.swift in Sources */,
 				2C6375E629C7FC060028CE5E /* ContentView.swift in Sources */,
 				2C6375E429C7FC060028CE5E /* Body_Mass_IndexApp.swift in Sources */,
 			);
@@ -585,19 +605,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2C6375EE29C7FC070028CE5E /* Body_Mass_Index.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2C6375EF29C7FC070028CE5E /* Body_Mass_Index.xcdatamodel */,
-			);
-			currentVersion = 2C6375EF29C7FC070028CE5E /* Body_Mass_Index.xcdatamodel */;
-			path = Body_Mass_Index.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2C6375D829C7FC060028CE5E /* Project object */;
 }
