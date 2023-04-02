@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Body_Mass_IndexApp: App {
+    @StateObject private var bmiController = BmiController()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, bmiController.container.viewContext)
         }
     }
 }

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C32DD5029D94EF30034F62F /* BmiModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C32DD4E29D94EF30034F62F /* BmiModel.xcdatamodeld */; };
+		2C32DD5329D94FEF0034F62F /* BmiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32DD5229D94FEF0034F62F /* BmiController.swift */; };
 		2C3435F129D8E64900729788 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F029D8E64900729788 /* CalculatorView.swift */; };
 		2C3435F329D8E7AB00729788 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F229D8E7AB00729788 /* HistoryView.swift */; };
-		2C3435F529D8E7E400729788 /* Bmi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3435F429D8E7E400729788 /* Bmi.swift */; };
 		2C6375E429C7FC060028CE5E /* Body_Mass_IndexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */; };
 		2C6375E629C7FC060028CE5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6375E529C7FC060028CE5E /* ContentView.swift */; };
 		2C6375E829C7FC070028CE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6375E729C7FC070028CE5E /* Assets.xcassets */; };
@@ -37,9 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C32DD4F29D94EF30034F62F /* Bmi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bmi.xcdatamodel; sourceTree = "<group>"; };
+		2C32DD5229D94FEF0034F62F /* BmiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiController.swift; sourceTree = "<group>"; };
 		2C3435F029D8E64900729788 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		2C3435F229D8E7AB00729788 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		2C3435F429D8E7E400729788 /* Bmi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bmi.swift; sourceTree = "<group>"; };
 		2C6375E029C7FC060028CE5E /* Body Mass Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Body Mass Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Body_Mass_IndexApp.swift; sourceTree = "<group>"; };
 		2C6375E529C7FC060028CE5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C32DD5129D94FBE0034F62F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C32DD5229D94FEF0034F62F /* BmiController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2C3435F629D8E8A400729788 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +100,7 @@
 		2C3435F729D8F5AA00729788 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C3435F429D8E7E400729788 /* Bmi.swift */,
+				2C32DD4E29D94EF30034F62F /* BmiModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 		2C6375E229C7FC060028CE5E /* Body Mass Index */ = {
 			isa = PBXGroup;
 			children = (
+				2C32DD5129D94FBE0034F62F /* Controller */,
 				2C3435F729D8F5AA00729788 /* Model */,
 				2C3435F629D8E8A400729788 /* View */,
 				2C6375E329C7FC060028CE5E /* Body_Mass_IndexApp.swift */,
@@ -282,10 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C32DD5029D94EF30034F62F /* BmiModel.xcdatamodeld in Sources */,
 				2C3435F329D8E7AB00729788 /* HistoryView.swift in Sources */,
-				2C3435F529D8E7E400729788 /* Bmi.swift in Sources */,
 				2C3435F129D8E64900729788 /* CalculatorView.swift in Sources */,
 				2C6375E629C7FC060028CE5E /* ContentView.swift in Sources */,
+				2C32DD5329D94FEF0034F62F /* BmiController.swift in Sources */,
 				2C6375E429C7FC060028CE5E /* Body_Mass_IndexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +617,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C32DD4E29D94EF30034F62F /* BmiModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C32DD4F29D94EF30034F62F /* Bmi.xcdatamodel */,
+			);
+			currentVersion = 2C32DD4F29D94EF30034F62F /* Bmi.xcdatamodel */;
+			path = BmiModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C6375D829C7FC060028CE5E /* Project object */;
 }

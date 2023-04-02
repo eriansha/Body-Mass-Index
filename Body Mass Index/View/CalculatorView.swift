@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct CalculatorView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     @Binding var weight: Double
     @Binding var height: Double
-    @Binding var savedHistories: [Bmi]
     
     @State private var score: Double
     
-    init(weight: Binding<Double>, height: Binding<Double>, savedHistories: Binding<[Bmi]>) {
+    init(weight: Binding<Double>, height: Binding<Double>) {
         self._weight = weight
         self._height = height
-        self._savedHistories = savedHistories
         
-        self._score = State(initialValue: Bmi.calculateScore(weight: weight.wrappedValue, height: height.wrappedValue)
-        )
+        self._score = State(initialValue: BmiController.calculateScore(
+            weight: weight.wrappedValue,
+            height: height.wrappedValue
+        ))
     }
     
     func addItem() {
-        let newBmi = Bmi(date: Date(), result: score)
-        savedHistories.insert(newBmi, at: 0)
+        BmiController().addBmi(
+            weight: weight,
+            height: height,
+            context: managedObjectContext
+        )
     }
     
     var body: some View {
@@ -42,7 +47,10 @@ struct CalculatorView: View {
             
             Slider(value: $weight, in: 45...120)
                 .onChange(of: weight) { newWeight in
-                    score = Bmi.calculateScore(weight: newWeight, height: height)
+                    score = BmiController.calculateScore(
+                        weight: newWeight,
+                        height: height
+                    )
                 }
             
             HStack {
@@ -57,7 +65,10 @@ struct CalculatorView: View {
             
             Slider(value: $height, in: 100...200)
                 .onChange(of: height) { newHeight in
-                    score = Bmi.calculateScore(weight: weight, height: newHeight)
+                    score = BmiController.calculateScore(
+                        weight: weight,
+                        height: newHeight
+                    )
                 }
             
             HStack {
@@ -72,9 +83,9 @@ struct CalculatorView: View {
                         .font(.title)
                         .bold()
                     
-                    Text(Bmi.getScale(score: score))
+                    Text(BmiController.getScale(score: score))
                         .font(.body)
-                        .foregroundColor(Bmi.getScaleColor(score: score))
+                        .foregroundColor(BmiController.getScaleColor(score: score))
                 }
             }.padding(.top, 20)
             
@@ -93,7 +104,6 @@ struct CalculatorView: View {
             .cornerRadius(8)
             .padding(.top, 20)
             
-            
             Spacer()
         }
     }
@@ -103,8 +113,7 @@ struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView(
             weight: .constant(60.0),
-            height: .constant(150.0),
-            savedHistories: .constant([])
+            height: .constant(150.0)
         )
     }
 }

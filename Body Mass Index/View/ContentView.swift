@@ -13,7 +13,6 @@ struct ContentView: View {
     @State private var index = 0
     @State private var weight = 70.0
     @State private var height = 150.0
-    @State private var savedHistories: [Bmi] = []
     
     var body: some View {
         NavigationView {
@@ -27,11 +26,10 @@ struct ContentView: View {
                 if index == 0 {
                     CalculatorView(
                         weight: $weight,
-                        height: $height,
-                        savedHistories: $savedHistories
+                        height: $height
                     )
                 } else {
-                    HistoryView(savedHistories: $savedHistories)
+                    HistoryView()
                 }
             }
             .padding(.horizontal, 16)

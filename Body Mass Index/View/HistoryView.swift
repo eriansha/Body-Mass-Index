@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct HistoryView: View {
-    @Binding var savedHistories: [Bmi]
+    @FetchRequest(
+        entity: BodyMassIndex.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \BodyMassIndex.date, ascending: false)
+        ]
+    ) var histories: FetchedResults<BodyMassIndex>
     
     var body: some View {
-        if savedHistories.isEmpty {
+        if histories.isEmpty {
             VStack {
                 Spacer()
                 
@@ -20,10 +25,14 @@ struct HistoryView: View {
                 Spacer()
             }
         } else {
-            List(savedHistories) { bmi in
+            List(histories) { bmi in
                 VStack(alignment: .leading) {
-                    Text("\(bmi.date.formatted(date: .abbreviated, time: .shortened))")
-                        .foregroundColor(.gray)
+                    if let unwrappedDate = bmi.date {
+                        Text("\(unwrappedDate.formatted(date: .abbreviated, time: .shortened))")
+                            .foregroundColor(.gray)
+                    } else{
+                        Text("-")
+                    }
                     
                     HStack {
                         Text(String(format: "%.2f", bmi.result))
@@ -32,9 +41,9 @@ struct HistoryView: View {
                         
                         Spacer()
                         
-                        Text("\(Bmi.getScale(score: bmi.result))")
+                        Text("\(BmiController.getScale(score: bmi.result))")
                             .font(.title2)
-                            .foregroundColor(Bmi.getScaleColor(score: bmi.result))
+                            .foregroundColor(BmiController.getScaleColor(score: bmi.result))
                     }
                     .padding(.top, -4)
                 }
@@ -45,7 +54,6 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView(savedHistories: .constant([
-        ]))
+        HistoryView()
     }
 }
