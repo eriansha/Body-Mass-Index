@@ -8,22 +8,26 @@
 import SwiftUI
 import CoreData
 
+enum Tab {
+    case calculator
+    case histories
+}
 
 struct ContentView: View {
-    @State private var index = 0
+    @State private var selectedTab: Tab = .calculator
     @State private var weight = 70.0
     @State private var height = 150.0
     
     var body: some View {
         NavigationView {
             VStack {
-                Picker("", selection: $index) {
-                    Text("Calculator").tag(0)
-                    Text("History").tag(1)
+                Picker("", selection: $selectedTab) {
+                    Text("Calculator").tag(Tab.calculator)
+                    Text("History").tag(Tab.histories)
                 }
                 .pickerStyle(.segmented)
                 
-                if index == 0 {
+                if selectedTab == Tab.calculator {
                     CalculatorView(
                         weight: $weight,
                         height: $height
